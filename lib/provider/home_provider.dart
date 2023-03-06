@@ -41,10 +41,10 @@ class HomeProvider extends ChangeNotifier {
       listFinalSS.addAll(listOrder);
       list = [];
     }
-    lisAsig();
+    assignedList();
   }
 
-  lisAsig() {
+  assignedList() {
     for (var i = 0; i < listFinalSS.length; i++) {
       for (var j = 0; j < listAddress.length; j++) {
         if (listFinalSS[i]['idStree'] == listAddress[j].id) {
