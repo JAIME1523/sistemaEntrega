@@ -39,7 +39,6 @@ class HomeProvider extends ChangeNotifier {
       }
       final listOrder = HomerServices().orderNumber(list);
       listFinalSS.addAll(listOrder);
-      // listFinalSS.add({"id": listAddress[i].id, "list": listOrder});
       list = [];
     }
     lisAsig();
