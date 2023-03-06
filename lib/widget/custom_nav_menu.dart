@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:sistema_entrega/provider/provider.dart';
 
 class CustomNavButto {
-  // final Function? onPressed;
-  //para ponder mandar a llamar la función en la seccion de _CustomNavMenuButtom
   final VoidCallback onPressed;
   final IconData icon;
   final String tilte;
@@ -31,15 +30,15 @@ class CustomNavMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-      create: (_) => _MenuModel(),
+      create: (_) => MenuModel(),
       child: AnimatedOpacity(
         duration: const Duration(milliseconds: 250),
         opacity: (mostar) ? 1 : 0,
         child: Builder(
           builder: (BuildContext context) {
-            Provider.of<_MenuModel>(context).backgroundColor = backgroundColor;
-            Provider.of<_MenuModel>(context).activeColor = activeColor;
-            Provider.of<_MenuModel>(context).inactiveColor = inactiveColor;
+            Provider.of<MenuModel>(context).backgroundColor = backgroundColor;
+            Provider.of<MenuModel>(context).activeColor = activeColor;
+            Provider.of<MenuModel>(context).inactiveColor = inactiveColor;
 
             return _PrinteredMenuBackground(
               child: _MenuItems(menuItems: items),
@@ -60,7 +59,7 @@ class _PrinteredMenuBackground extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Color backgroundColor = Provider.of<_MenuModel>(context).backgroundColor;
+    Color backgroundColor = Provider.of<MenuModel>(context).backgroundColor;
     return Container(
       width: 300,
       height: 60,
@@ -100,12 +99,11 @@ class _CustomNavMenuButtom extends StatelessWidget {
   final CustomNavButto item;
   @override
   Widget build(BuildContext context) {
-    final itemSeleccionado = Provider.of<_MenuModel>(context).itemSeleccionado;
+    final itemSeleccionado = Provider.of<MenuModel>(context).itemSeleccionado;
 
     return GestureDetector(
       onTap: () {
-        //se pone el listen false para que no redibuje todo el widget
-        Provider.of<_MenuModel>(context, listen: false).itemSeleccionado =
+        Provider.of<MenuModel>(context, listen: false).itemSeleccionado =
             index;
 
         itemSeleccionado == index ? null : item.onPressed();
@@ -129,15 +127,15 @@ class _CustomNavMenuButtom extends StatelessWidget {
             Icon(item.icon,
                 size: (itemSeleccionado == index) ? 18 : 14,
                 color: (itemSeleccionado == index)
-                    ? Provider.of<_MenuModel>(context).activeColor
-                    : Provider.of<_MenuModel>(context).inactiveColor),
+                    ? Provider.of<MenuModel>(context).activeColor
+                    : Provider.of<MenuModel>(context).inactiveColor),
             const Spacer(),
             itemSeleccionado == index
                 ? Text(
                     item.tilte,
                     style: TextStyle(
                         fontSize: 13,
-                        color: Provider.of<_MenuModel>(context).activeColor),
+                        color: Provider.of<MenuModel>(context).activeColor),
                   )
                 : Container(),
             const Spacer(),
@@ -148,16 +146,4 @@ class _CustomNavMenuButtom extends StatelessWidget {
   }
 }
 
-class _MenuModel with ChangeNotifier {
-  Color backgroundColor = Colors.white;
-  Color activeColor = Colors.white; //black
-  Color inactiveColor = Colors.blueGrey;
-  int _itemSeleccionado = 0;
 
-  int get itemSeleccionado => _itemSeleccionado;
-
-  set itemSeleccionado(int index) {
-    _itemSeleccionado = index;
-    notifyListeners();
-  }
-}

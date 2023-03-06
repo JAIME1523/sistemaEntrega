@@ -40,7 +40,7 @@ class CustomCard extends StatelessWidget {
           child: Row(
             children: [
               Expanded(child: widget),
-              Container(
+              SizedBox(
                 width: 50,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,

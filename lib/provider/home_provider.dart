@@ -18,6 +18,7 @@ class HomeProvider extends ChangeNotifier {
       listDrivers =
           List<DriverModel>.from(dataDriver.map((x) => DriverModel.fromMap(x)));
       init();
+      // ignore: empty_catches
     } catch (e) {}
   }
 
@@ -57,12 +58,6 @@ class HomeProvider extends ChangeNotifier {
                   listAddress[j].assignedDriver = listDrivers[k].id;
                   listDrivers[k].assignedTrip = listAddress[j].id;
                   listAddress[j].sS = listFinalSS[i]['resp'];
-                  print(listFinalSS[i]['resp']);
-                  if (listFinalSS[i]['resp'] == 18.0) {
-                    print(listFinalSS[i]);
-                    print( listAddress[k].stateProvinceArea);
-
-                  }
                 }
               }
             }
@@ -79,6 +74,7 @@ class HomeProvider extends ChangeNotifier {
       }
     }
   }
+
   retrunStrate(int id) {
     for (var i = 0; i < listAddress.length; i++) {
       if (listAddress[i].id == id) {

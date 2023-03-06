@@ -22,7 +22,7 @@ class HomerServices {
       }
     } else {
       aumento = factorComun(streetR, nameDriver);
-      final resp = checkNameDrive(nameDriver, 'consonate');
+      final resp = checkNameDrive(nameDriver, 'consonante');
 
       if (aumento > 1) {
         ss = resp * 1;
@@ -73,12 +73,8 @@ class HomerServices {
   }
 
   orderNumber(dynamic lisNumber) {
-    List listFinal = [];
 
     dynamic mb;
-    // for (var element in lisNumber) {
-    //   listFinal.add(element['resp']);
-    // }
     for (int i = 0; i < lisNumber.length; i++) {
       for (int j = 0; j < lisNumber.length - 1; j++) {
         if (lisNumber[i]['resp'] > lisNumber[j]['resp']) {
@@ -96,7 +92,6 @@ class HomerServices {
     for (int i = 0; i < streetR.length; i++) {
       if (i < nameDriver.length) {
         if (streetR[i] == nameDriver[i]) {
-          // print('tiene aumento ${streetR} $nameDriver');
           aumento++;
         }
       }

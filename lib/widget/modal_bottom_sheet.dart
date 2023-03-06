@@ -20,7 +20,7 @@ class ModalBottomSheet extends StatelessWidget {
       padding: const EdgeInsets.only(left: 20, right: 20, bottom: 10),
       decoration: BoxDecoration(
         // color: ThemeColorsDark.options,
-        color: Color.fromARGB(255, 77, 77, 77),
+        color: const Color.fromARGB(255, 77, 77, 77),
         borderRadius: BorderRadius.vertical(top: Radius.circular(topCircular)),
       ),
       width: width,
@@ -36,7 +36,7 @@ class ModalBottomSheet extends StatelessWidget {
                 Text(
                   title,
                   textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 20),
+                  style: const TextStyle(fontSize: 20),
                 ),
                 content,
               ],
