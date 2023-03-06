@@ -1,0 +1,72 @@
+[
+    {
+        "street": "4889 Yorkie Lane",
+        "city": "Climax",
+        "state/province/area": "Michigan",
+        "phoneNumber": " 912-871-4199",
+        "zipCode": 49034
+    },
+    {
+        "street": "492 Skips Lane",
+        "city": "Casa",
+        "state/province/area": "Arkansas",
+        "phoneNumber": " 928-530-8895",
+        "zipCode": 72025
+    },
+    {
+        "street": "1596 Cantebury Drive",
+        "city": "Mineola",
+        "state/province/area": "New York",
+        "phoneNumber": " 646-584-5030",
+        "zipCode": 11501
+    },
+    {
+        "street": "4313 Michael Street",
+        "city": "Houston",
+        "state/province/area": "Texas",
+        "phoneNumber": " 713-800-4735",
+        "zipCode": 77002
+    },
+    {
+        "street": "2928 Deer Haven Drive",
+        "city": "Sterling",
+        "state/province/area": "Michigan",
+        "phoneNumber": " 864-314-4183",
+        "zipCode": 48659
+    },
+    {
+        "street": "4787 Strother Street",
+        "city": "Birmingham",
+        "state/province/area": "Alabama",
+        "phoneNumber": " 205-585-5085",
+        "zipCode": 35203
+    },
+    {
+        "street": "3102 Hillhaven Drive",
+        "city": "Los Angeles",
+        "state/province/area": "California",
+        "phoneNumber": " 323-921-8567",
+        "zipCode": 90071
+    },
+    {
+        "street": "1151 Sampson Street",
+        "city": "Denver",
+        "state/province/area": "Colorado",
+        "phoneNumber": " 303-615-4879",
+        "zipCode": 80202
+    },
+    {
+        "street": "4622 Oliver Street",
+        "city": "Plano",
+        "state/province/area": "Texas",
+        "phoneNumber": " 817-363-6314",
+        "zipCode": 75074
+    },
+    {
+        "street": "195 Hamilton Drive",
+        "city": "Port Arthur",
+        "state/province/area": "Texas",
+        "phoneNumber": " 409-989-0696",
+        "zipCode": 77640
+    }
+]
